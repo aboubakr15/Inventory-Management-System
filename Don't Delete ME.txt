@@ -1,0 +1,5 @@
+mysql port is 3300 on client's laptop.
+
+Password ramb.
+
+mysql password is Admin123

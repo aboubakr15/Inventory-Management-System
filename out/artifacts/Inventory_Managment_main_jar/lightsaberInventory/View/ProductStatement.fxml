@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lightsaberInventory.View.ProductStatementController">
+<children>
+    <Label fx:id="productName" alignment="CENTER" layoutX="31.0" layoutY="14.0" prefHeight="23.0" prefWidth="241.0" stylesheets="@../../style.css" text="Product Name" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="528.0">
+        <font>
+            <Font size="20.0" />
+        </font></Label>
+    <!--        <Button fx:id="showDetailsButton" layoutX="175.0" layoutY="398.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="30.0" prefWidth="100.0" text="Show Details" />-->
+    <Button fx:id="closeButton" layoutX="708.0" layoutY="434.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="80.0" text="Close" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="13.0" />
+    <TableView fx:id="statementSoldTable" layoutX="14.0" layoutY="167.0" prefHeight="255.0" prefWidth="380.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="167.0">
+        <columns>
+            <TableColumn fx:id="dateSoldCol" prefWidth="95.0" text="Date" />
+            <TableColumn fx:id="clientNameSoldCol" prefWidth="95.0" text="Client" />
+            <TableColumn fx:id="quantitySoldCol" prefWidth="95.0" text="Sold" />
+            <TableColumn fx:id="priceCol" prefWidth="95.0" text="Price" />
+        </columns>
+    </TableView>
+    <Label fx:id="productModel" alignment="CENTER" layoutX="300.0" layoutY="14.0" prefHeight="23.0" prefWidth="241.0" stylesheets="@../../style.css" text="Product Model" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="259.0">
+        <font>
+            <Font size="20.0" />
+        </font></Label>
+    <Label fx:id="productUses" alignment="CENTER" layoutY="58.0" prefHeight="23.0" prefWidth="800.0" stylesheets="@../../style.css" text="Product Use" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <font>
+            <Font size="20.0" />
+        </font></Label>
+    <TableView fx:id="statementBoughtTable" layoutX="400.0" layoutY="167.0" prefHeight="255.0" prefWidth="380.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="167.0">
+        <columns>
+            <TableColumn fx:id="dateBoughtCol" prefWidth="130.0" text="Date" />
+            <TableColumn fx:id="quantityBoughtCol" prefWidth="108.0" text="Bought" />
+            <TableColumn fx:id="priceIncomeCol" prefWidth="140.0" text="Buying Price" />
+        </columns>
+    </TableView>
+      <DatePicker fx:id="startDatePicker" layoutX="14.0" layoutY="142.0" onAction="#handleFilterButtonActionForProduct" prefHeight="25.0" prefWidth="122.0" promptText="start date" AnchorPane.leftAnchor="14.0" />
+      <DatePicker fx:id="endDatePicker" layoutX="136.0" layoutY="142.0" onAction="#handleFilterButtonActionForProduct" prefHeight="25.0" prefWidth="122.0" promptText="end date" AnchorPane.leftAnchor="136.0" />
+      <Label fx:id="totalSoldQuantity" alignment="CENTER" layoutX="420.0" layoutY="119.0" prefHeight="23.0" prefWidth="202.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="totalBoughtQuantity" alignment="CENTER" layoutX="420.0" layoutY="90.0" prefHeight="23.0" prefWidth="202.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label></children>
+</AnchorPane>

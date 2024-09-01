@@ -1,0 +1,29 @@
+* {
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+}
+AnchorPane {
+    -fx-background-color: #f0f2f7;
+
+}
+/*#partNameCol, #partIdCol, #partInventoryCol, #partPriceCol,
+ #productIdCol, #productNameCol, #productInStockCol, #productBuyingPriceCol, #productSellingPriceCol{
+    -fx-background-color: grey;
+}*/
+TableView {
+    -fx-background-color: #d8dff2;
+}
+Button {
+    -fx-background-color: #3a7bf2;
+    -fx-text-fill: white;
+}
+Button:hover {
+    -fx-background-color: #d8dff2;
+}
+TextField {
+    -fx-background-color: #fff;
+    -fx-border-color: #3a7bf2;
+    -fx-border-radius: 5px;
+    -fx-color: white;
+    -fx-alignment: center-left;
+}
